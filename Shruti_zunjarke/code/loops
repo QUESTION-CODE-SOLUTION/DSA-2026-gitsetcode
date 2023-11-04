@@ -1,0 +1,353 @@
+//code to print table using loops
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    int a;
+    cin>>a;
+    for(int i=1;i<=10;i++){
+        cout<<a<<"*"<<i<<"="<<a*i<<endl;
+    }
+    cout<<endl;
+    cout<<"\n";// endl & \n both are same
+    for(int i=10;i>0;i--){
+        cout<<a<<"*"<<i<<"="<<a*i<<endl;
+    }
+    return 0;
+}
+
+// how loops work
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=1;i<11;i++){
+        for(int j=1;j<11;j++){
+            cout<<i<<" "<<j<<" "<<endl;;
+        }
+    }
+    return 0;
+}
+
+ /*
+    * * * * 
+    * * * * 
+    * * * * 
+    * * * * 
+    */
+#include<iostram>
+using namesapce std;
+int main(){
+    for(int i=1;i<=4;i++){   // first loop for rows and the nested one for column
+        for(int j=1;j<=4;j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+return 0;
+}
+
+/*
+1 2 3 4 5 
+1 2 3 4 5 
+1 2 3 4 5 
+1 2 3 4 5 
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=1;i<=4;i++){ 
+        for(int j=1;j<=5;j++){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+/*
+1 1 1 1 1 
+2 2 2 2 2 
+3 3 3 3 3 
+4 4 4 4 4
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=1;i<=4;i++){ 
+        for(int j=1;j<=5;j++){
+            cout<<i<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+/*
+* # * # 
+* # * # 
+* # * # 
+* # * # 
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=1;i<=4;i++){ 
+        for(int j=1;j<=4;j++){
+            if(j%2==0){
+                cout<<"#"<<" ";
+            }
+            else{
+                cout<<"*"<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+/*
+* * * * 
+# # # # 
+* * * * 
+# # # #
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=1;i<=4;i++){ 
+        for(int j=1;j<=4;j++){
+            if(i%2==0){
+                cout<<"# ";
+            }
+            else{
+                cout<<"* ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+/*
+   * * * *
+   * # * #
+   * * * *
+   * # * #
+* /
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=1;i<=4;i++){ 
+        for(int j=1;j<=4;j++){
+            if(j%2==0 && i%2==0){
+                cout<<"# ";
+            }
+            else{
+                cout<<"* ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+/*
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+   for(int i=1;i<=5;i++){
+        for(int j=1;j<=i;j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+/*
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=1;i<=5;i++){
+        for(int j=1;j<=i;j++){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+
+/*
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=5;i>=1;i--){
+        for(int j=1;j<=i;j++){   //for(int j=i;j>=1;j--)  both are same 
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+/*
+1 2 3 4 5 
+1 2 3 4 
+1 2 3 
+1 2 
+1 
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+     for(int i=5;i>=1;i--){
+        for(int j=1;j<=i;j++){    
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+/*
+5 4 3 2 1 
+4 3 2 1 
+3 2 1 
+2 1 
+1 
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=5;i>=1;i--){
+        for(int j=i;j>=1;j--){    
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+/*
+/*
+1
+1 0 
+1 0 1
+1 0 1 0
+1 0 1 0 1
+*/
+
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=1;i<=5;i++){
+        for(int j=1;j<=i;j++){
+            if(j%2==0){
+                cout<<"0 ";
+            }
+            else{
+                cout<<"1 "; 
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+
+/*
+* * * * * 
+  * * * * 
+    * * * 
+      * * 
+        * 
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=5;i>=1;i--){   
+        for(int j=5-i;j>=1;j--){
+            cout<<"  ";
+        }
+        for(int k=i;k>=1;k--){    
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+OR
+
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=1;i<=5;i++){   
+        for(int j=1;j<=i-1;j++){
+            cout<<"  ";
+        }
+        for(int k=i;k<=5;k++){    
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+/*
+/*
+        * 
+      * * 
+    * * * 
+  * * * * 
+* * * * * 
+*/
+#include<iostream>
+using namespace std;
+ int main()
+ {
+    for(int i=5;i>=1;i--){
+        for(int j=i-1;j>=1;j--){
+            cout<<"  ";
+        }
+        for(int k=5-i+1;k>=1;k--){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+
