@@ -1,0 +1,24 @@
+class Solution {
+public:
+    bool isPalindrome(long x) {
+        long temp,n,reverse=0 ;
+        temp=x;
+        while(x>0)
+        {
+            n= x % 10;
+            reverse= reverse* 10 + n;
+            x= x/10;
+        }
+        if(temp==reverse){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+};
+
+//Input
+//x=121
+//Output
+//true
