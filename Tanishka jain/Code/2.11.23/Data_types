@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+ 
+int main () {
+   int Num = 5;               // Integer (whole number)
+   float FloatNum = 2.5;     // Floating point number
+   double DoubleNum = 9.98;   // Floating point number
+   char Letter = 'D';         // Character
+   bool Boolean = true;       // Boolean
+   string Text = "Hello";     // String
+   return 0;
+}
