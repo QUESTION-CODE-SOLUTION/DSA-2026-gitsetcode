@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int colour;
+    cin>>colour;
+
+    switch(colour){
+        case 1:
+        cout<<"Red Colour";
+        break;
+        
+        case 2:
+        cout<<"Lavender Colour";
+        break;
+        
+        case 3:
+        cout<<"Blue Colour";
+        break;
+        
+        default:
+        cout<<"No Colour";
+        break;
+        
+    }
+    
+    return 0;
+}
