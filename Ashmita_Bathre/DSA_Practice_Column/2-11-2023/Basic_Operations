@@ -1,0 +1,31 @@
+CODE:
+--------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int num1,num2;
+cout<<"Enter two inputs:";
+cin>> num1>>num2;
+cout<<"num1+num2= "<< num1+num2<<endl;
+cout<<"num1-num2= "<< num1-num2<<endl;
+cout<<"num1*num2= "<< num1*num2<<endl;
+cout<<"num1/num2= "<< num1/num2<<endl;
+//cout<<"num1//num2= "<< (num1num2) <<endl;
+cout<<"num1%num2= "<< num1%num2<<endl;
+// cout<<"num1**num2= "<< num1**num2<<endl;
+
+
+return 0;
+}
+
+OUTPUT:
+-----------
+Enter two inputs:5 6
+num1+num2= 11
+num1-num2= -1
+num1*num2= 30
+num1/num2= 0
+num1%num2= 5
