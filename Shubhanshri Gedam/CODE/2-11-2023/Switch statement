@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std ;
+
+int main()
+{
+  int n;
+  cout<<"Enter member: ";
+  cin>>n;
+  
+  switch (n){
+    case 1:
+      cout<<"good morning mam ";
+        break;
+    case 2:
+      cout<<"good morning to both of you mam";
+        break;
+    case 3:
+      cout<<"good morning to all of you mam";
+  }
+}
+
+
+//Enter member: 2
+//good morning to both of you mam
