@@ -1,0 +1,34 @@
+CODE:
+------------
+#include <iostream>
+using namespace std;
+
+int main() {
+  int size;
+
+  cout<<"Enter the size of the Pattern :"<<endl;
+  cin>>size;
+
+  // outer loop for rows
+  for(int row=0;row<size;row++)
+  {
+    //inner loop is for columns
+    for(int col=0;col<size;col++)
+    {
+      cout<<"* ";
+    }
+    cout<<endl;
+  }
+  
+  
+}
+
+OUTPUT:
+-----------
+Enter the size of the Pattern :
+5
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
