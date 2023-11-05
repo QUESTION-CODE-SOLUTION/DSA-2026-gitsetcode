@@ -1,0 +1,21 @@
+CODE:
+-----------
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+string Name;
+cout<<"Hello world"<<endl;
+cout<<"Enter Your Name: ";
+cin>> Name;
+cout<<endl<<"Welocome to the column "<<Name;
+return 0;
+}
+
+OUTPUT:
+-------------
+Hello world
+Enter Your Name: manjulika
+Welocome to the column manjulika
