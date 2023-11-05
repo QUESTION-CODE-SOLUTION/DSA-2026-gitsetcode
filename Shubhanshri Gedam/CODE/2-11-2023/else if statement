@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std ;
+
+int main()
+{
+  int n;
+  cout<<"Enter a number: ";
+  cin>>n;
+  
+  if(n<20){
+    cout<<"Good Morning";
+  }
+  else if(n>30){
+    cout<<"Good Afternoon";
+  }  
+  else{
+    cout<<"Good Evening";
+  }
+}
+
+
+//Enter a number: 40
+// Good Afternoon
