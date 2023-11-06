@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+void pattern(int n)
+{
+	int i, k, flag = 1;
+	for (i = 1, k = 0; i <= 2 * n - 1; i++) {
+		// Handles case 1
+		if (i < n - k)
+			cout << " ";
+		else {
+			if (flag)
+				cout << "*";
+			else
+				cout << " ";
+
+			flag = 1 - flag;
+		}
+
+		if (i == n + k) {
+			k++;
+			cout << endl;
+			if (i == 2 * n - 1)
+				break;
+
+			i = 0;
+			flag = 1;
+		}
+	}
+}
+
+int main()
+{
+	int n = 6;
+	pattern(n);
+	return 0;
+}
+
+output:
+     
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+* * * * * *
