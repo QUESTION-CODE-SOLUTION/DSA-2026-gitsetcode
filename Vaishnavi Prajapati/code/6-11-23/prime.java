@@ -1,3 +1,4 @@
+
 public class prime {
     public static void main(String[]args){
         // how isne 2 ko ek prime number kyu liya
@@ -19,3 +20,4 @@ public class prime {
     }}
      
     
+
