@@ -25,3 +25,7 @@ int n, t1 = 0, t2 = 1, nextnumber = 0;
     
 return 0;
 }
+
+Output:
+Enter the number of terms:6
+Fibonacci Series: 0 , 1 , 1 , 2 , 3 , 5 , 
