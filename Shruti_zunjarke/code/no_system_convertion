@@ -15,3 +15,22 @@ int main() {
         
     return 0;
 }
+
+// binary to decimal
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int num;
+    cin>>num;
+    int power=0;
+    int ans=0;
+    while(num!=0){
+        int digit=num%10;
+        ans+=digit*pow(2,power);
+        power++;
+        num/=10;
+    }
+    cout<<ans;
+    return 0;
+}
