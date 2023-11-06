@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+  
+  float weight_kilograms, height_meters;
+
+  cout << "Enter your weight in kilograms: ";
+  cin >> weight_kilograms;
+
+  cout << "Enter your height in meters: ";
+  cin >> height_meters;
+
+  float bmi = weight_kilograms / pow(height_meters, 2);
+
+
+  cout << "Your BMI is: " << bmi << endl;
+
+  return 0;
+}
+
+
+//Enter your weight in kilograms:54
+//Enter your height in meters: 1.70688 
+//Your BMI is: 18.5348
