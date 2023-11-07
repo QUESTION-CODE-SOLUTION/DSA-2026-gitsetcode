@@ -1,0 +1,56 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+  
+  float a, b, c, radius, area, perimeter;
+
+  int choice;
+
+  cout << "\nEnter Your Choice :";
+
+  cin >> choice;
+
+  switch (choice) {
+  case 1: {
+    cout << "\nEnter Base and Height of Triangle: ";
+    cin >> a >> b;
+    c=a;
+    
+    area = (a*b) / 2 ; 
+      cout<<"Area of triangle = :"<<area<<" sq. units."<<endl;
+    perimeter= a+b+c;
+    cout<<"Perimeter of triangle = :"<<perimeter<<" units."<<endl;
+      break;
+    }
+  case 2: {
+      cout << "\nEnter the Side Of Square: ";
+      cin >> a;
+      area = a * a;
+      cout << "\nArea of Square = " << area << endl;
+      perimeter = 4 * a;
+      cout<<"Perimeter of Square = :"<<perimeter<<endl;
+      break;
+    }
+  case 3: {
+      cout << "\nEnter the Radius of Circle: ";
+      cin >> radius;
+      area = 3.14159 * radius * radius;
+      cout << "\nArea of Circle = " << area << endl;
+      perimeter = 2 * 3.14159 * radius;
+      cout << "Perimeter of Circle = :"<<perimeter<<endl;
+      break;
+    }
+  case 4: {
+      cout << "\nEnter the Length and Width of Rectangle: ";
+      cin >> a >> b;
+      area = a * b;
+      cout << "\nArea Of Rectangle = " << area << endl;
+      perimeter=2*(a+b);
+      cout<<" The perimeter of the rectangle is : "<<perimeter << endl;
+      break;
+    }
+   
+    }
+     return 0;
+}
