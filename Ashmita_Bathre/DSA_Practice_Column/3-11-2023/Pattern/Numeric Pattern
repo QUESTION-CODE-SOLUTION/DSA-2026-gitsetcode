@@ -1,0 +1,192 @@
+PATTERN[1]:
+
+Enter the size of the Pattern:6
+1 2 3 4 5 6 
+1 2 3 4 5 6 
+1 2 3 4 5 6 
+1 2 3 4 5 6 
+1 2 3 4 5 6 
+1 2 3 4 5 6 
+
+CODE:
+#include <iostream>
+using namespace std;
+
+int main() {
+  int size;
+  cout<<"Enter the size of the Pattern:";
+  cin>>size;
+
+  for (int row=0; row<size; row++)
+  {
+    for(int col=0; col<size;col++)
+      {
+        cout<<col+1<<" ";
+      }
+    cout<<endl;
+  }
+  return 0;
+}
+-----------------------------------------------------------
+PATTERN[2]:
+Enter the size of the Pattern:5
+1 1 1 1 1 
+2 2 2 2 2 
+3 3 3 3 3 
+4 4 4 4 4 
+5 5 5 5 5 
+
+CODE:
+#include <iostream>
+using namespace std;
+
+int main() {
+  int size;
+  cout<<"Enter the size of the Pattern:";
+  cin>>size;
+
+  for (int row=0; row<size; row++)
+  {
+    for(int col=0; col<size;col++)
+      {
+        cout<<row+1<<" ";
+      }
+    cout<<endl;
+  }
+  return 0;
+}
+--------------------------------------------------------------
+PATTERN[3]:
+Enter the size of the Pattern:5
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+
+CODE:
+#include <iostream>
+using namespace std;
+
+int main() {
+  int size;
+  cout<<"Enter the size of the Pattern:";
+  cin>>size;
+
+  for (int row=0; row<size; row++)
+  {
+    for(int col=0; col<=row;col++)
+      {
+        cout<<col+1<<" ";
+      }
+    cout<<endl;
+  }
+  return 0;
+}
+---------------------------------------------------------------------
+PATTERN[4]:
+Enter the size of the Pattern:6
+6 5 4 3 2 1 
+5 4 3 2 1 
+4 3 2 1 
+3 2 1 
+2 1 
+1 
+
+CODE:
+#include <iostream>
+using namespace std;
+
+int main() {
+  int size;
+  cout<<"Enter the size of the Pattern:";
+  cin>>size;
+
+  for (int row=0; row<size; row++)
+  {
+    for(int col=size-row; col>0;col--)
+      {
+        cout<<col<<" ";
+      }
+    cout<<endl;
+  }
+  return 0;
+}
+--------------------------------------------------------------------
+PATTERN[5]:
+Enter the size of the Pattern:5
+5 4 3 2 1 
+5 4 3 2 
+5 4 3 
+5 4 
+5 
+
+
+CODE:
+#include <iostream>
+using namespace std;
+
+int main() {
+  int size;
+  cout<<"Enter the size of the Pattern:";
+  cin>>size;
+
+  for (int row=0; row<size; row++)
+  {
+    for(int col=0; col<size-row;col++)
+      {
+        cout<<size-col<<" ";
+      }
+    cout<<endl;
+  }
+  return 0;
+}
+-----------------------------------------------------------------
+PATTERN[6]:
+Enter the size of the Pattern:7
+1 
+0 1 
+1 0 1 
+0 1 0 1 
+1 0 1 0 1 
+0 1 0 1 0 1 
+1 0 1 0 1 0 1 
+
+CODE:
+
+ #include <iostream>
+using namespace std;
+
+int main() {
+  int size;
+  cout<<"Enter the size of the Pattern:";
+  cin>>size;
+
+  for (int row=0; row<size; row++)
+  {
+    for(int col=0; col<=row;col++)
+      {
+        if(row%2==0)
+        {
+          if(col%2==0)
+          {cout<<1<<" ";}
+
+          else
+          {cout<<0<<" ";}
+        }
+
+        else
+        {
+          if(col%2==0)
+          {cout<<0<<" ";}
+
+          else
+          {cout<<1<<" ";}
+          
+        }
+      }
+    cout<<endl;
+  }
+  return 0;
+}
+----------------------------------------------------------------------------------------------
