@@ -1,0 +1,47 @@
+#include <iostream> 
+#include <math.h> 
+#include <cstring>
+using namespace std; 
+int main(){
+
+  float length;
+  cout<<"Enter length:";
+  cin>>length;
+  float width;
+  cout<<"Enter width:";
+  cin>>width;
+  char choose_shape;
+  float area;
+  float perimeter;
+  cout<<"enter any shape of your choice:"<<endl<< "\n 1.Square as S \n 2. rectangle as R \n 3.circle as C \n"<<endl;
+  cout<<"enter your choice"<<endl;
+  cin>>choose_shape;
+  
+
+
+  if(choose_shape == 'S')
+  {
+    area=length*length;
+    cout<<"area of the square is:"<<area<<endl;
+    perimeter=4*length;
+    cout<<"perimeter of the square is:"<<perimeter;
+
+  }
+  else if (choose_shape =='R'){
+    area=length*width;
+    cout<<"area of the rectangle is:"<<area<<endl;
+    perimeter=2*(length+width);
+     cout<<"perimeter of the rectangle is:"<<perimeter;
+    
+  }
+  else if(choose_shape=='C'){
+    area=3.14*length*length;
+     cout<<"area of the circle is:"<<area<<endl;
+    perimeter=2*3.14*length;
+    cout<<"perimeter of the rectangle is:"<<perimeter;
+    
+    
+  }
+
+return 0;
+}
