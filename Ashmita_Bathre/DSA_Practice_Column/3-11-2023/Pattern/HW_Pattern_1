@@ -1,4 +1,4 @@
-CODE:
+[1]CODE:
 ----------
 #include<iostream>
 using namespace std;
@@ -36,3 +36,39 @@ Enter the size of the pattern:6
 * # * # * # 
 * * * * * * 
 * # * # * # 
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+[2]CODE:
+----------
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int size;
+  cout<<"Enter the size of the pattern:";
+  cin>>size;
+
+  for(int row=0;row<size;row++) 
+    {
+      for(int col=0;col<size;col++)
+        {
+          if(row%2==0)
+            cout<<"* ";
+          else
+            cout<<"# ";
+         }
+      cout<<endl;
+    }
+}
+
+OUTPUT:
+--------------
+Enter the size of the pattern:6
+* * * * * * 
+# # # # # # 
+* * * * * * 
+# # # # # # 
+* * * * * * 
+# # # # # #
