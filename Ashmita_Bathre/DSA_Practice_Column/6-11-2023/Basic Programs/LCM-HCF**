@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,LCM,HCF,x,y,temp;
+    cout<<"Enter two numbers :";
+    cin>>x>>y;
+    a=x;
+    b=y;
+    while (b != 0)
+    {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+    HCF = a;
+    cout<<"HCF IS :"<<HCF<<endl;
+    //Now to calculate LCM , we use formula n1*n2/HCF
+     LCM = (x * y) / HCF;
+    cout<<"LCM is :"<< LCM;
+    return 0;
+}
+// Enter two numbers :56 67
+// HCF IS :1
+// LCM is :3752
