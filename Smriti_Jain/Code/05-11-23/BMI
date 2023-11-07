@@ -1,1 +1,30 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    float h;
+    cout<<"Enter height of a person(in m): ";
+    cin>>h;
+    float w;
+    cout<<"Enter weight of a person(in kg): ";
+    cin>>w;
+    float bmi=w/pow(h,2);
+    if (bmi < 18.5){
+        cout<<"Person is Underweight";
+    } 
+    else if (bmi >= 18.5 && bmi < 24.9){
+        cout<<"Person is Healthy";
+    } 
+    else if (bmi >= 18.5 && bmi < 24.9){
+        cout<<"Person is Overweight";
+    }
+    else{
+        cout<<"Person is suffering from Obesity";
+    }   
+    return 0;
+}
 
+
+// Enter height of a person(in m): 1.78
+// Enter weight of a person(in kg): 68
+// Person is Healthy
