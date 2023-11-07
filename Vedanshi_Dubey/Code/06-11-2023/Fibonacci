@@ -1,0 +1,22 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int n,term1=0,term2=1,nextterm=0;
+    cout<<"Enter number upto which you want to print series: ";
+    cin>>n;
+    cout<<"Fibonacci Series :"<< term1<<" ,"<<term2<<" ,";
+      nextterm=term1+term2;
+    for(int i=1;i<=n;i++){
+        // cout<< term1 <<" , ";
+   
+    term1=term2;
+    term2 =nextterm;
+    nextterm=term1+term2;
+    
+        cout<<nextterm<<" , ";
+    }
+    
+}
+// Enter number upto which you want to print series: 10
+// Fibonacci Series :0 ,1 ,2 , 3 , 5 , 8 , 13 , 21 , 34 , 55 , 89 , 144 , 
