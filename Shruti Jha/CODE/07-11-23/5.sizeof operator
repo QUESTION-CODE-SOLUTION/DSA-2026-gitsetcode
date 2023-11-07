@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    int arr[5] = {2, 4, 6, 8, 10};
+    n = sizeof(arr) / sizeof(arr[0]);
+    cout << "Number of elements: " << n << endl;
+    cout << "Array's elements: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
