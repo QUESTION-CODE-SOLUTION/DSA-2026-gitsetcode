@@ -32,3 +32,34 @@ int main()
 
 ---------------------------------------------------------------------------------------------------
 //Pattern 2
+
+Enter the size of the pattern:5
+* * * * *
+* * * *
+* * * 
+* *  
+* 
+
+---------------------------------------
+ 
+CODE:
+----------
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int size;
+  cout<<"Enter the size of the pattern:";
+  cin>>size;
+
+  for(int row=0;row<size;row++)
+  {
+  for(int col=size;col>0;col--)
+    {
+      cout<<"* ";
+    }
+  cout<<endl;
+  }
+}
+
