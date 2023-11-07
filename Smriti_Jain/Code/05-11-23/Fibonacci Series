@@ -5,7 +5,7 @@ int main() {
     cout<<"Enter the no. of terms: ";
     cin>>n;
     cout<<n1<<" "<<n2<<" ";
-    for(int i=2;i<=n;i++){
+    for(int i=2;i<n;i++){
         n3=n1+n2;
         cout<<n3<<" ";
         n1=n2;
@@ -16,4 +16,4 @@ int main() {
 
 
 // Enter the no. of terms: 5
-// 0 1 1 2 3 5
+// 0 1 1 2 3 
