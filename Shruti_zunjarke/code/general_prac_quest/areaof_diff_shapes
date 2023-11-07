@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int area, choice=0;
+    string shape;
+    cout<<"Enter shape:";
+    cin>>shape;
+    if(shape=="square"){
+        choice=1;
+    }
+    else if(shape=="rectangle"){
+        choice=2;
+    }
+    else if(shape=="circle"){
+        choice=3;
+    }
+    else{
+        cout<<"Enter valid shape"<<endl;
+    }
+    switch (choice){
+        case 1:/*square*/
+        int side;
+        cout<<"Enter length of side:";
+        cin>>side;
+        cout<<"Perimeter of square: "<<4*side<<endl;
+        cout<<"Area of square: "<<side*side<<endl;
+        break;
+        case 2:/*rectangle*/
+        int length,breadth;
+        cout<<"Enter length: ";
+        cin>>length;
+        cout<<"Enter breadth: ";
+        cin>>breadth;
+        cout<<"Perimeter of rectangle: "<<2*(length+breadth)<<endl;
+        cout<<"Area of rectangle: "<<length*breadth<<endl;
+        break;
+        case 3:/*circle*/
+        int radius;
+        cout<<"Enter radius of circle: ";
+        cin>>radius;
+        cout<<"Perimeter of circle: "<<4*3.14*radius<<endl;
+        cout<<"Area of circle: "<<3.14*radius*radius<<endl;
+        break;
+    default:
+        break;
+    }
+    return 0;
+}
