@@ -1,0 +1,18 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int n,ans=0,p=0;
+    cout<<"Enter a number : ";
+    cin>>n;
+    while(n!=0){
+        int rem=n%2;
+        ans=ans+pow(10,p)*rem;
+        p++;
+        n=n/2;
+    }
+        cout<<ans;
+    
+}
+// Enter a number : 8
+// 1000
