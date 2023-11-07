@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int date,year,month,ans;
+    cout<<"Enter birth date: ";
+    cin>>date;
+    cout<<"Enter birth month: ";
+    cin>>month;
+    cout<<"Enter birth year: ";
+    cin>>year;
+    ans = date+month+year;
+    if(ans%2==0){
+        cout<<"Even it is !!\n A message for you"<<endl;
+        cout<<"Live life to express not to impress";
+    }
+    else{
+        cout<<"Odd it is !!\n A message for you"<<endl;
+        cout<<"Be a rainbow in someone's cloud";
+    }
+        
+        cout<<endl;
+    
+}
+Enter birth date: 15
+// Enter birth month: 03
+// Enter birth year: 2005
+// Odd it is !!
+//  A message for you
+// Be a rainbow in someone's cloud
