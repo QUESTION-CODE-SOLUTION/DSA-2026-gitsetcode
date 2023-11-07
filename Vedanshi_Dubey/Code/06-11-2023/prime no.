@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i,j;
+    cout<<"Enter a number: ";
+    cin>>n;
+    if(n<=1){
+            cout<<"Not prime";
+            
+        }
+    for(i=2;i<=n;i++){
+       
+        if(n%1==0 && n%n==0 && n%i!=0){
+            cout<<"Prime";
+            break;
+        }
+        else{
+            cout<<"Not prime";
+            break;
+        }
+        }
+        cout<<endl;
+    }
+
+// Enter a number: 1
+// Not prime
+// Enter a number: 7
+// Prime
