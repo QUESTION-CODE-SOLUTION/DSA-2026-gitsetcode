@@ -1,0 +1,155 @@
+1. Check element same or not
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[] = {2,3,15,15,3,2};
+    int read = 1;
+    int i,j = 5;
+    for(i =0;i<6/2;i++)
+    {
+        if(a[i]!=a[j])
+        {
+            read = 0;
+            break;
+        }
+        else
+            j--;
+    }
+    cout << read << "\n";
+    return 0;
+}	
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Calculate grade of student
+#include<iostream>
+using namespace std;
+int main()
+{
+        int marks[5], i;
+        float sum=0,avg;
+
+        cout<<"\n Enter Marks of Student \n";
+        cout<<"------------------------------------";
+        cout<<"\n Hindi : ";
+        cin>>marks[0];
+        cout<<"\n English : ";
+        cin>>marks[1];
+        cout<<"\n Maths : ";
+        cin>>marks[2];
+        cout<<"\n History : ";
+        cin>>marks[3];
+        cout<<"\n Science : ";
+        cin>>marks[4];
+
+        for(i=0;i<5;i++)
+        {
+                sum=sum+marks[i];
+        }
+        cout<<"------------------------------------";
+        cout<<"\n Total Marks of Student = "<<sum;
+        avg=sum/5;
+        cout<<"\n Average = "<<avg;
+        cout<<"\n Grade   = ";
+
+        if(avg>80)
+        {
+                cout<<"A";
+        }
+        else if(avg>60 && avg<=80)
+        {
+                cout<<"B";
+        }
+        else if(avg>40 && avg<=60)
+        {
+                cout<<"C";
+        }
+        else
+        {
+                cout<<"D";
+        }
+        return 0;
+}	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.	Calculate arithmetic mean
+#include<iostream>
+using namespace std;
+int main()
+{
+        int num, i, arr[50], sum=0;
+        cout<<"\n How Many Numbers You Want to Enter? \n";
+        cin>>num;
+        cout<<"\n Enter "<<num<<" Numbers : \n";
+        for(i=0; i<num; i++)
+        {
+                cin>>arr[i];
+                sum=sum+arr[i];
+        }
+        int armean=sum/num;
+        cout<<"\n Arithmetic Mean = "<<armean;
+        return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.sorting in descending order
+#include<iostream>
+using namespace std;
+int main ()
+{
+    int num[10];
+    int i, j, desc;
+
+    cout<<"\n Enter 10 Numbers : \n";
+    cout<<" ";
+    for (i = 0; i < 10; ++i)
+    cin>>num[i];
+   
+    for (i = 0; i < 10; ++i)   //  'for' loop is used for sorting the numbers in descending order
+    {
+        for (j = i + 1; j < 10; ++j)
+        {
+            if (num[i] < num[j])
+            {
+                desc = num[i];
+                num[i] = num[j];
+                num[j] = desc;
+            }
+        }
+    }
+    cout<<"\n Numbers in Descending Order : \n";
+    for (i = 0; i < 10; ++i)
+    {
+        cout<<" ";
+        cout<<num[i];
+        cout<<"\n";
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.print two dimensional array
+#include<iostream>
+using namespace std;
+int main()
+{
+        int arr[10][10], rows, cols, i, j;
+        cout<<"\n Enter Rows for Array (Max 10) : ";
+        cin>>rows;
+        cout<<"\n Enter Columns for Array (Max 10) : ";
+        cin>>cols;
+        cout<<"\n Enter "<<rows<<"*"<<cols<<" Array Elements : \n";
+        for(i=0; i<rows; i++)
+        {
+                for(j=0; j<cols; j++)
+                {
+                        cout<<" ";
+                        cin>>arr[i][j];
+                }
+        }
+        cout<<"\n Two Dimensional Array is : \n";
+        for(i=0; i<rows; i++)
+        {
+                for(j=0; j<cols; j++)
+                {
+                        cout<<" "<<arr[i][j]<<" ";
+                }
+                cout<<"\n";
+        }
+        return 0;
+}
