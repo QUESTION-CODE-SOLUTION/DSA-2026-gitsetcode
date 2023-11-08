@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {5, 9, 11, 23, 8};
+    cout << "size of a given array is: " << sizeof(arr[11]) << endl;
+    
+    int n = sizeof(arr) / sizeof(arr[11]);
+    cout << "length of an given array: " << n << endl;
+
+    return 0;
+}
+
+Output:
+size of a given array is: 4
+length of an given array: 5
