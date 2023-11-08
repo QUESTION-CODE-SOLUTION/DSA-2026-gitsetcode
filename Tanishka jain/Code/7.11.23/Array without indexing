@@ -1,0 +1,19 @@
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{
+    int arr[] = { 5, 11, 26, 24 }; 
+    cout << "first element: " << *arr << endl; 
+    cout << "Second element: " << *(arr + 1) << endl; 
+    cout << "Third element: " << *(arr + 2) << endl; 
+    cout << "fourth element: " << *(arr + 3) << endl; 
+  
+    return 0; 
+}
+
+Output:
+first element: 5
+Second element: 11
+Third element: 26
+fourth element: 24
