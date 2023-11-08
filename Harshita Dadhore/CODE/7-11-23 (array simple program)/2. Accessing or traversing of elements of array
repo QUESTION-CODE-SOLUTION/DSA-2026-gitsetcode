@@ -21,3 +21,21 @@ int main()
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
+2. second method of getting element of arrays:
+
+
+#include <iostream> 
+using namespace std; 
+int main() 
+{ 
+	int arr[3]; 
+	arr[0] = 6; 
+	arr[1] = 4; 
+	arr[2] = 2; 
+
+	cout << "1st element: " << arr[0] << endl; 
+	cout << "2nd element: " << arr[1] << endl; 
+	cout << "3rd element: " << arr[2] << endl;
+   
+	return 0; 
+}
