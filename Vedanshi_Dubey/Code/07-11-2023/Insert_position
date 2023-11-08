@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[6];
+    cout<<"Enter elements of array :"<<endl;
+    for(int i=0;i<5;i++){
+        cin>>arr[i];
+    }
+    cout<<"Array elements :"<<" ";
+     for(int i=0;i<5;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    int target,i;
+    cout<<"Enter target value :"<<endl;
+    cin>>target;
+    for(int i=0;i<5;i++){
+        if(arr[i]>=target){
+            cout<<"Position to insert "<< target <<"is :"<< i<<" ";
+            break;
+        }
+        
+    }
+    
+    return 0;
+}
+// Enter elements of array :
+// 10
+// 11
+// 13
+// 14
+// 15
+// Array elements : 10 11 13 14 15 
+// Enter target value :
+// 12
+// Position to insert 12is :2 
