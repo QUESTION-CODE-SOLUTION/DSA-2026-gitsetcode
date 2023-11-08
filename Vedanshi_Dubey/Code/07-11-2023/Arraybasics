@@ -4,18 +4,18 @@
 using namespace std;
 int main(){
     int arr[5]={1,2,3,4,5};
+//Accesssing array elements using index
     cout<<arr[0]<<" ";
     cout<<arr[1]<<" ";
     cout<<arr[2]<<" ";
     cout<<arr[3]<<" ";
     cout<<arr[4]<<" "<<endl;
-
-
+//Through loop
     cout<<"Number printing through loop :";
     for(int i=0;i<5;i++){
         cout<<arr[i]<<" ";
     }
-
+//Sizeof operator
     cout<<endl;
     cout<<"Size of array :"<<sizeof(arr)<<endl;
     cout<<sizeof(arr[0])<<endl;
