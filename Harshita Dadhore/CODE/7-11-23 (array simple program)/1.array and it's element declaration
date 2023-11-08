@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[4];
+    arr[0]=2;
+    arr[1]=5;
+    arr[2]=4;
+    arr[3]=9;
+    
+
+  //int arr[5]={2,5,4,9};
+    return 0;
+}
