@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int s,temp,i,j;
+    int arr[4] = {10,3,5,7};
+   
+    s = sizeof(arr) / sizeof(arr[0]);
+    for ( i = 0,  j = s - 1; i < s/2; i++, j--)  
+    {    
+       
+        temp = arr[i];  
+        arr[i] = arr[j];  
+        arr[j] = temp;  
+    }  
+    cout << "Array's reverse elements: " ;
+    for(int i=0;i<s;i++){
+        cout  <<arr[i] << " ";
+        
+    }
+    return 0;
+}
