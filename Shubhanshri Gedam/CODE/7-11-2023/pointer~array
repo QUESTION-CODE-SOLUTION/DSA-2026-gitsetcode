@@ -1,0 +1,21 @@
+#include <iostream> 
+using namespace std; 
+
+int main() 
+{  
+  int arr[] = { 5, 10, 15, 20 }; 
+
+  // Define a pointer 
+  int* ptr = arr; 
+
+  // Printing address of the arrary using array name 
+  cout << "Memory address of arr: " << arr << endl; 
+
+  // Printing address of the array using ptr 
+  cout << "Memory address of arr: " << ptr << endl; 
+
+  return 0; 
+}
+
+//Memory address of arr:0x7ffce32d4d00 
+//Memory address of arr:0x7ffce32d4d00
