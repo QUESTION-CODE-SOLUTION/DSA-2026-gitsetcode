@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[5],sum=0;
+    cout << "Enter elements of array:" ;
+    for(int i=0;i<4;i++){
+        cin>>arr[i] ;
+        sum+=arr[i];
+    }
+    cout << "Sum of elements of array is: "<<sum;
+	return 0;
+}
+
+
+// Enter elements of array:1 2 3 4 5
+// Sum of elements of array is: 15
