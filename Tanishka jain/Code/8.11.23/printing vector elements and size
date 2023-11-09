@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+      vector<int> nums{ 2, 3, 5, 1, 2, 4 };
+           //print vector elements
+           cout <<"Vector elements are: ";
+           for (int x : nums)
+           cout << x << " ";
+           cout <<endl;
+            cout << nums.size();
+
+      return 0;
+}
+
+Output:
+Vector elements are: 2 3 5 1 2 4
+6
