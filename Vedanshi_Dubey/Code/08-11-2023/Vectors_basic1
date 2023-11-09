@@ -1,0 +1,53 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    //vector<data_type>vector_name = {, , ..};
+    vector<int>vec_1 ={1,2,3,4,5};
+    //Size of vector
+    cout<<vec_1.size()<<endl;
+    //printing vector through loop
+    for(int i=0;i<vec_1.size();i++){
+        cout<<vec_1[i]<<" " ;
+    }
+    cout<<endl;
+    //push_back()-add new values from the last and automatically modify its size
+    vec_1.push_back(86);
+    //New vector after pushing back 86
+    for(int i=0;i<vec_1.size();i++){
+        cout<<vec_1[i]<<" " ;
+    }
+    cout<<endl;
+    vector<int>newvec_1 = {1,2};
+    cout<<newvec_1.size()<<endl;
+    newvec_1.push_back(86);
+    cout<<newvec_1.size()<<endl;
+    newvec_1.push_back(66);
+    cout<<newvec_1.size()<<endl;
+    newvec_1.push_back(30);
+    cout<<newvec_1.size()<<endl;
+    newvec_1.push_back(56);
+    cout<<newvec_1.size()<<endl;
+
+     for(int i=0;i<vec_1.size();i++){
+        cout<<newvec_1[i]<<" " ;
+    }
+    cout<<endl;
+    vector<int>vec;
+    cout<<"Enter the size of array :"<<endl;
+    int s;
+    cin>>s;
+    for(int i=0;i<s;i++){
+        cout<<"Enter "<< i+1<<" element : ";
+        int a;
+        cin>>a;
+        vec.push_back(a);
+    }
+    for(int i=0;i<vec.size();i++){
+        cout<<vec[i]<<" " ;
+    }
+    return 0;
+
+}
