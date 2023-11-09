@@ -11,7 +11,6 @@ int main() {
     cout << i << "  ";
   }
   
-  // add the integers 6 and 7 to the vector
   num.push_back(6);
   num.push_back(7);
 
@@ -20,6 +19,131 @@ int main() {
   for (const int& i : num) {
     cout << i << "  ";
   }
+
+  return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.count the number of occurence
+int counts[10];
+
+for (int x = 0; x <= 10; x++){
+    int counter = 0;
+    for (int j = 0; j < ARRAY_SIZE; j++){
+        if (x == myArray[j]){
+            counts[x] == counter++;
+        }
+    }
+
+    cout << "Number: " << x << "Number of Occurances: " << counts[counter]<< "\n";
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Acess element of the vector
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+  vector<int> num {1, 2, 3, 4, 5};
+
+  cout << "Element at Index 0: " << num.at(0) << endl;
+  cout << "Element at Index 2: " << num.at(2) << endl;
+  cout << "Element at Index 4: " << num.at(4);
+
+  return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.change vector element
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+  vector<int> num {1, 2, 3, 4, 5};
+
+  cout << "Initial Vector: ";
+
+  for (const int& i : num) {
+    cout << i << "  ";
+  }
+
+  num.at(1) = 9;
+  num.at(4) = 7;
+
+  cout << "\nUpdated Vector: ";
+
+  for (const int& i : num) {
+    cout << i << "  ";
+  }
+
+  return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.Delete element of the vector
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  vector<int> prime_numbers{2, 3, 5, 7};
+  
+  cout << "Initial Vector: ";
+  for (int i : prime_numbers) {
+    cout << i << " ";
+  }
+
+  prime_numbers.pop_back();
+
+  cout << "\nUpdated Vector: ";
+  for (int i : prime_numbers) {
+    cout << i << " ";
+  }
+  
+  return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.vector iterators
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+  vector<int> num {1, 2, 3, 4, 5};
+
+  vector<int>::iterator iter;
+
+  iter = num.begin();
+
+  cout << "num[0] = " << *iter << endl;
+
+  iter = num.begin() + 2;
+  cout << "num[2] = " << *iter;
+
+  iter = num.end() - 1;
+  cout << "num[4] = " << *iter;
+
+  return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+7.iterat through vector using operators
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+  vector<int> num {1, 2, 3, 4, 5};
+
+
+  vector<int>::iterator iter;
+
+  iter = num.begin();
+  cout << "num[0] = " << *iter << endl;
+
+  iter = num.begin() + 2;
+  cout << "num[2] = " << *iter;
+
+  iter = num.end() - 1;
+  cout << "num[4] = " << *iter;
 
   return 0;
 }
