@@ -1,0 +1,59 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+// int multiplyy(int a,int b){  // datatype functionname(parameters){ body}  parameters&argument
+//     return a*b;
+// }
+// int main(){
+//     cout<<multiplyy(5,4)<<endl;
+//     int c=multiplyy(3,8);
+//     cout<<c;
+// }
+
+//{12,3,6,1,0,8}
+// o/p- {60,15,30,5,0,40}
+// vector<int> multiply_5(vector<int>arr1){
+//     vector<int> result;
+//     for(int i=0;i<arr1.size();i++){
+//         result.push_back(arr1[i]*5);
+//     }
+//     return result;
+// }
+// int main(){
+//     vector<int>arr1={12,3,6,1,0,8};
+//     vector<int>arr2=multiply_5(arr1);
+//     arr1=arr2;
+//     for(int i=0;i<arr1.size();i++){
+//         cout<<arr1[i]<<" ";
+//     }
+// }     
+
+    //      OR
+// vector<int> multiply_5(vector<int>arr1){
+//     vector<int> result;
+//     for(int i=0;i<arr1.size();i++){
+//         result.push_back(arr1[i]*5);
+//     }
+//     return result;
+// }
+// int main(){
+//     vector<int>arr1={12,3,6,1,0,8};
+//     arr1=multiply_5(arr1);
+//     for(int i=0;i<arr1.size();i++){
+//         cout<<arr1[i]<<" ";
+//     }
+// }      
+
+
+void multy(vector<int>&vec){  // changes will be directly applied to &name
+    for(int i=0;i<vec.size();i++){
+        vec[i]*=5;
+    }
+}
+int main(){
+    vector<int>arr={10,20,30,40,70};
+    multy(arr);
+    for(int i=0;i<arr.size();i++){
+        cout<<arr[i]<<" ";
+    }
+}
