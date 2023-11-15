@@ -1,0 +1,17 @@
+class Solution {
+public:
+    vector<int> constructRectangle(int area) {
+        int l=area;
+        long i=2;
+        vector<int> ans;
+        while(i<=area/2){
+                if(area%i==0 && i-(area/i)<l-(area/l) && i>=area/i){
+                    l=i;
+                 }
+                 i++;
+        } 
+        ans.push_back(l);
+        ans.push_back(area/l);
+        return(ans);
+    }
+};
