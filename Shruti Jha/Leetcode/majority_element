@@ -1,3 +1,4 @@
+C++
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
@@ -9,7 +10,7 @@ public:
 
 
 
-
+Java
 class Solution {
     public int majorityElement(int[] nums) {
         int count=0;
