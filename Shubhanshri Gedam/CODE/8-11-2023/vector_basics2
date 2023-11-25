@@ -1,0 +1,83 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    vector<int>vec2 ={3,45,67,7};
+    //pop_back()-remove the last value from the array
+    cout<<vec2.size()<<endl;
+    vec2.pop_back();
+    for(int i=0;i<vec2.size();i++){
+        cout<<vec2[i]<<" " ;
+    }
+    cout<<endl;
+    cout<<vec2.size()<<endl;
+    vec2.pop_back();
+    vec2.pop_back();
+    cout<<vec2.size()<<endl;
+     for(int i=0;i<vec2.size();i++){
+        cout<<vec2[i]<<" " ;
+    }
+    cout<<endl;
+   //Insertion - to insert at a particular index
+   // vector_name.insert(vector_name.begin()+no. of index skipped,value to be inserted)
+   vector<int>vec3 ={5,87,23,6,2,98};
+   cout<<"Before insertion :";
+   for(int i=0;i<vec3.size();i++){
+        cout<<vec3[i]<<" " ;
+    }
+    cout<<endl;
+   vec3.insert(vec3.begin()+4,99);
+   cout<<"After insertion :";
+   for(int i=0;i<vec3.size();i++){
+        cout<<vec3[i]<<" " ;
+    }
+    cout<<endl;
+    // vector with fixed size and same values
+    vector<int> vec5(10,0);
+    for(int i=0;i<vec5.size();i++)
+    {
+      cout<<vec5[i]<<" ";
+    }
+    cout<<endl;
+    vector<int> vec6(11,6);
+    for(int i=0;i<vec6.size();i++)
+    {
+      cout<<vec6[i]<<" ";
+    }
+    cout<<endl;
+//erase - to remove element from a particular index
+// vector_name.erase(vector_name.begin()+index to be skipped)
+vector<int>vec7 ={65,35,4,45,23,87};
+  cout<<vec7.size()<<endl;
+  vec7.erase(vec7.begin()+2);
+  //65 35 45 23 87
+  cout<<vec7.size()<<endl; 
+  vec7.erase(vec7.begin()+1);
+  cout<<vec7.size()<<endl;
+  for(int i=0;i<vec7.size();i++)
+    {
+      cout<<vec7[i]<<" ";
+    }
+    cout<<endl;
+  //sort -  used to sort the vector
+  vector<int>vec8 ={5,22,57,1,87,55,32};
+  sort(vec8.begin(),vec8.end());
+  for(int i=0;i<vec8.size();i++)
+    {
+      cout<<vec8[i]<<" ";
+    }
+    cout<<endl;
+    // Vector
+    vector<vector<int>>vec11 ={{2,4,5},{6,7,4},{4,53,8}};
+    for(int i=0;i<vec11.size();i++)
+    {
+      for(int j=0;j<vec11[i].size();j++)
+        {
+          cout<<vec11[i][j]<<" ";
+        }
+      cout<<endl;
+    }
+    return 0;
+}
