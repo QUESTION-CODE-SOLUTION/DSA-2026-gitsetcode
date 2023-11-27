@@ -10,6 +10,7 @@ public:
             sum+=y;
             i+=2;
         }
+
         return sum; 
     }
 };
