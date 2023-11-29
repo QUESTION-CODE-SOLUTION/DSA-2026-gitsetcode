@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+void multiplyy(int a,int b){
+   cout<<a+b;
+}
+int main(){
+   multiplyy(5,4);
+   return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+int multiplyy(int a,int b){
+   return a+b;
+}
+int main(){
+   cout<<multiplyy(5,4)<<endl;
+   int c=multiplyy(3,4);
+   cout<<c;
+   return 0;
+}
