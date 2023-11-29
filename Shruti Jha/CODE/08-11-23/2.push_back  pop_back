@@ -1,0 +1,33 @@
+#include<iostream>
+#include<vector>
+using namespace std; 
+int main(){
+   vector<int>vec={1,2,3};
+   vec.push_back(4);
+   vec.push_back(5);
+   for(int i=0;i<vec.size();i++){
+      cout<<vec[i]<<" ";
+   }
+   cout<<endl;
+
+   vector<int>vec2;
+   int sizee;
+   cout<<"Enter size of array: ";
+   cin>>sizee;
+   for(int i=0;i<sizee;i++){
+      cout<<"Enter"<<i+1<<"elmt";
+      int h;
+      cin>>h;
+      vec2.push_back(h);
+   }
+   for(int i=0;i<vec2.size();i++){
+      cout<<vec2[i]<<" ";
+   }
+   cout<<endl;
+   vec2.pop_back();
+   vec2.pop_back();
+   for(int i=0;i<vec2.size();i++){
+      cout<<vec2[i]<<" ";
+   }
+   return 0;
+}
