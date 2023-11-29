@@ -24,6 +24,24 @@ int main(){
 
 
 
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    for(int i=0;i<5;i++){
+        for(int j=-4;j<=4;j++){
+            if(j>-i&&j<i){
+                cout<<" ";
+            }
+            else cout<<"*";
+        }
+        cout<<endl;
+    }
+   return 0;
+}
+
+
+
 
 // Enter a number: 5
 // ***********
