@@ -8,6 +8,7 @@ int main(){
    for(int i=0;i<vec.size();i++){
       cout<<vec[i]<<" ";
    }
+//2-D VECTOR
    vector<vector<int>>vec2={
                               {1,2,3}, 
                               {23,56,67}
