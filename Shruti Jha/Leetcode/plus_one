@@ -21,3 +21,44 @@ public:
         return digits;
     }
 };
+
+
+ #include <iostream>
+    #include<vector>
+using namespace std;
+    vector<int> plusOne(vector<int>& digits) {
+        int n=digits.size(),count=0,i;
+        if(digits[digits.size()-1]<9){
+            digits[digits.size()-1]+=1;
+            return digits;
+        }
+        for( i=n-1;i>=0;i--){
+            if(digits[i]!=9){
+                break;
+            }
+            else{
+                count++;
+            }
+        }
+        if(count==n){
+            vector<int>nums(n,0);
+             digits=nums;
+             digits.insert(digits.begin()+0,1);   
+        }
+        else{
+            digits[i]+=1;
+            for(int j=n-1;j>=n-count;j--){
+                digits[j]=0;
+            }
+        }
+        return digits;
+    }
+int main(){
+    vector<int> digits={2,9,9};
+    plusOne(digits);
+    for(int i=0;i<digits.size();i++){
+        cout<<digits[i];
+    }
+    return 0;
+}
+
