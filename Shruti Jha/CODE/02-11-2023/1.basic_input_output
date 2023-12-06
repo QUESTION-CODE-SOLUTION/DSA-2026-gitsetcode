@@ -7,3 +7,4 @@ int main(){
     cout<<"Entered number is: "<<num<<endl;
     return 0;
 }
+
