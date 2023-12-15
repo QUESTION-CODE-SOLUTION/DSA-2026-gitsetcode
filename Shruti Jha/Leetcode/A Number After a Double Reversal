@@ -16,7 +16,6 @@ public:
         }
 
        return num==reversed2?true:false;
-
     }
 };
 
