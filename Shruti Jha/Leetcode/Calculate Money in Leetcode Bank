@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int totalMoney(int n) {
+        int i=1,temp,sum=0,count=0;
+        temp=i;
+        while(n>0){
+            sum+=i;count++;
+            if(count==7){
+                i=temp;
+                temp++;
+                count=0;
+            }
+             i++;
+             n--;
+        }
+        return sum;
+    }
+};
