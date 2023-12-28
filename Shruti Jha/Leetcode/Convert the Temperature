@@ -5,6 +5,7 @@ public:
         v.push_back(celsius + 273.15);
         v.push_back(celsius * 1.80 + 32.000);
         return v;
+
     }
 };
 
