@@ -88,3 +88,82 @@ int main(){
     }
     cout<<areaSwitchCase(ch, a);
 }
+
+//Fpr Loop
+#include<bits/stdc++.h>
+using namespace std;
+
+int fib(int n){
+        if(n<=1){
+                return n;
+        }
+        return fib(n-1)+fib(n-2);
+}
+int main()
+{
+        int n;
+        cin>>n;
+        cout<<fib(n);
+        return 0;
+}
+
+//while loop
+#include<iostream>
+using namespace std;
+
+int main() {
+	long n;
+	cin>>n;
+	int evensum=0,oddsum=0;
+	while(n!=0){
+		int digit=n%10;
+		if(digit%2==0){
+			evensum+=digit;
+		}
+		else{
+			oddsum+=digit;
+		}
+		n/=10;
+	}
+	cout<<evensum<<" "<<oddsum;
+	return 0;	
+}
+
+//Function
+#include <iostream>
+using namespace std;
+int Maximum(int x, int y)
+{
+	if(x>y){
+		return x;
+	}
+	else{
+		return y;
+	}
+}
+void Swap(int &x, int &y)
+{
+	int z=x;
+	x=y;
+	y=z;
+}
+int main()
+{
+	int test, a, b, r;
+	cin >> test;
+	cin >> a >> b;
+	switch (test)
+	{
+	case 1:
+		r = Maximum(a, b);
+		cout << r;
+		break;
+	case 2:
+		Swap(a, b);
+		cout << a << " " << b;
+		break;
+	default:
+		cout << "Invalid test option";
+	}
+	return 0;	
+}
