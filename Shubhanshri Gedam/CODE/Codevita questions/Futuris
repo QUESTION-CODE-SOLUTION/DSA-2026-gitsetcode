@@ -1,0 +1,95 @@
+def evaluate_condition(cond, variables):
+    cond = cond.strip().replace("=", "==").replace("===", "==").replace("!==", "!=")
+    for v in variables:
+        cond = cond.replace(v, str(variables[v]))
+    try:
+        return eval(cond)
+    except:
+        return False
+
+
+def execute_block(lines, i, variables, local_vars):
+    output = []
+    while i < len(lines):
+        line = lines[i].strip()
+        if not line or line.lower() == 'end':
+            return i, output
+        tokens = line.split()
+
+        if tokens[0].lower() == 'print':
+            val = tokens[1]
+            if val in variables:
+                output.append(str(variables[val]))
+            elif val in local_vars:
+                output.append(str(local_vars[val]))
+            else:
+                output.append(val)
+
+        elif tokens[0].lower() == 'if':
+            cond = " ".join(tokens[1:])
+            if evaluate_condition(cond, {**variables, **local_vars}):
+                i += 1
+                if lines[i].strip().lower() == 'yes':
+                    i += 1
+                    i, yes_out = execute_block(lines, i, variables, local_vars)
+                    output.extend(yes_out)
+                    if i + 1 < len(lines) and lines[i + 1].strip().lower() == 'no':
+                        while i < len(lines) and lines[i].strip().lower() != 'end':
+                            i += 1
+                else:
+                    i += 1
+            else:
+                while i < len(lines) and lines[i].strip().lower() != 'no':
+                    i += 1
+                if i < len(lines) and lines[i].strip().lower() == 'no':
+                    i += 1
+                    i, no_out = execute_block(lines, i, variables, local_vars)
+                    output.extend(no_out)
+
+        elif tokens[0].lower() == 'for':
+            var, start, end = tokens[1], tokens[2], tokens[3]
+            start = int(variables.get(start, local_vars.get(start, start)))
+            end = int(variables.get(end, local_vars.get(end, end)))
+            i += 1
+            start_i = i
+            for val in range(start, end + 1):
+                local_vars[var] = val
+                i = start_i
+                i, inner_out = execute_block(lines, i, variables, local_vars)
+                output.extend(inner_out)
+            while i < len(lines) and lines[i].strip().lower() != 'end':
+                i += 1
+
+        i += 1
+    return i, output
+
+
+def main():
+    code_lines = []
+    while True:
+        try:
+            line = input()
+            if line.strip() == "":
+                continue
+            code_lines.append(line)
+        except EOFError:
+            break
+
+    if len(code_lines) < 3:
+        return
+
+    vars_line = code_lines[-2].strip()
+    vals_line = code_lines[-1].strip()
+    script_lines = code_lines[:-2]
+
+    vars_names = list(vars_line.strip())
+    vars_values = list(map(int, vals_line.strip().split()))
+    variables = {vars_names[i]: vars_values[i] for i in range(len(vars_names))}
+
+    _, result = execute_block(script_lines, 0, variables, {})
+    for val in result:
+        print(val)
+
+
+if __name__ == "__main__":
+    main()
